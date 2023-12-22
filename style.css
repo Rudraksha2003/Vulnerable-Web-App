@@ -1,17 +1,51 @@
 /* project-folder/style.css */
 
 body {
-    background-color: #000;
+    background-image: url('hacking-gif.gif'); /* Replace with the actual path to your hacking GIF */
+    background-size: cover;
     color: #0f0;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    margin: 50px;
+    margin: 0;
+    overflow: hidden;
+    animation: backgroundAnimation 20s linear infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Make the background image faint */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('hacking-gif.gif') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.5; /* Set the opacity value as per your preference */
+    z-index: -1;
+}
+
+header {
+    padding: 50px 0;
 }
 
 h1 {
     font-size: 2.5em;
     margin-bottom: 30px;
     color: #f00;
+}
+
+nav {
+    margin-bottom: 20px;
 }
 
 ul {
@@ -36,4 +70,24 @@ a:hover {
     border-bottom: 2px solid #f00;
 }
 
-/* Add more styles as needed */
+/* Add a div for the hacking animation */
+#hacking-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Customize the width and height as per your GIF dimensions */
+#hacking-animation img {
+    width: 300px;
+    height: 300px;
+}
+
+/* Homepage content styling */
+.homepage-content {
+    color: #00ff00; /* Change to your preferred color */
+    font-size: 1.2em;
+    margin: 20px;
+}
