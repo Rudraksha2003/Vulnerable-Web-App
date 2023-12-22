@@ -1,0 +1,39 @@
+/* project-folder/style.css */
+
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #f00;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0f0;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-bottom: 2px solid #0f0;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+a:hover {
+    border-bottom: 2px solid #f00;
+}
+
+/* Add more styles as needed */
