@@ -1,7 +1,7 @@
 /* project-folder/style.css */
 
 body {
-    background-image: url('hacking-gif.gif'); /* Replace with the actual path to your hacking GIF */
+    background-image: url('hacking-gif.gif'); /* Update the path to your hacking GIF */
     background-size: cover;
     color: #0f0;
     font-family: 'Courier New', Courier, monospace;

@@ -1,0 +1,55 @@
+<!-- Vulnerable web app/modules/module1/module1.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="module1_style.css">
+    <title>Module 1: Broken Access Control</title>
+</head>
+<body>
+    <header>
+        <h1>Module 1: Broken Access Control</h1>
+    </header>
+
+    <div class="module-content">
+        <section>
+            <div class="theory-section">
+                <h3>Significance</h3>
+                <p>
+                    Broken Access Control poses a significant threat by allowing unauthorized users to access sensitive information, exposing the security and privacy of the system.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Impact</h3>
+                <p>
+                    The impact includes potential data breaches, exposure of confidential data, and a compromised user experience due to unauthorized access.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Remediation</h3>
+                <p>
+                    To address Broken Access Control, implement robust access controls, ensure proper user authentication, and regularly audit and enforce permissions.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Examples</h3>
+                <p>
+                    Common examples involve insecure session management, insufficient authorization checks, and vulnerabilities related to direct object references.
+                </p>
+            </div>
+        </section>
+
+        <!-- Button to access the IDOR challenge -->
+        <a href="./idor.html" class="idor-button">Access IDOR Challenge</a>
+
+        <!-- Additional content as needed -->
+    </div>
+
+    <script src="module1_script.js"></script>
+</body>
+</html>
