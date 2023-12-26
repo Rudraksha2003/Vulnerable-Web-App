@@ -1,0 +1,15 @@
+// // route_user.js
+// const express = require('express');
+// const path = require('path');
+// const router = express.Router();
+
+// router.get('/:userId', (req, res) => {
+//     const userId = req.params.userId;
+
+//     // Serve user-specific HTML, CSS, and JavaScript files
+//     res.sendFile(path.join(__dirname, 'user', `${userId}.html`));
+//     res.sendFile(path.join(__dirname, 'user', `${userId}.css`));
+//     res.sendFile(path.join(__dirname, 'user', `${userId}.js`));
+// });
+
+// module.exports = router;
