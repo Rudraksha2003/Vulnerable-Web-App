@@ -1,5 +1,7 @@
 /* project-folder/style.css */
 
+/* project-folder/style.css */
+
 body {
     background-image: url('hacking-gif.gif'); /* Update the path to your hacking GIF */
     background-size: cover;
@@ -7,9 +9,10 @@ body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     margin: 0;
-    overflow: hidden;
+    overflow: auto; /* Enable scrolling */
     animation: backgroundAnimation 20s linear infinite;
 }
+
 
 @keyframes backgroundAnimation {
     0% {
