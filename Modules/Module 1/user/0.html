@@ -1,4 +1,4 @@
-<!-- Vulnerable web app/user/1.html -->
+<!-- Vulnerable web app/user/0.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="user.css">
-    <title>User Dashboard</title>
+    <title>Admin Dashboard</title>
 </head>
 <body>
     <script>
@@ -16,7 +16,7 @@
             window.location.href = '../idor.html';
         }
 
-        // Function to log out the user
+        // Function to log out the admin
         function logout() {
             // Remove the flag from localStorage to indicate that the user is logged out
             localStorage.removeItem('isUserLoggedIn');
@@ -26,16 +26,16 @@
     </script>
 
     <header>
-        <h1>User Dashboard</h1>
+        <h1>Welcome, Admin User!</h1>
     </header>
 
-    <!-- Dummy information for user 1 -->
-    <div class="user-info">
-        <h2>User 1 Information</h2>
-        <p><strong>Name:</strong> John Doe</p>
-        <p><strong>Phone Number:</strong> +1 (555) 123-4567</p>
-        <p><strong>Email:</strong> john.doe@example.com</p>
-        <p><strong>Credit Card Number:</strong> **** **** **** 1234</p>
+    <!-- Sensitive information for the admin -->
+    <div class=".admin-info">
+        <h2>Admin Information</h2>
+        <p><strong>Name:</strong> Admin User</p>
+        <p><strong>Email:</strong> admin@example.com</p>
+        <p><strong>Secret Access Code:</strong> ACME-123-XYZ</p>
+        <p><strong>Top-Secret Plans:</strong> <em>Classified</em></p>
     </div>
 
     <!-- Logout button -->

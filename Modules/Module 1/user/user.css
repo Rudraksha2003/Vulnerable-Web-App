@@ -41,5 +41,13 @@ button:hover {
     color: #fff;
 }
 
-/* Customize styles as needed */
+/* Styles specific to the admin page */
+.admin-info {
+    border: 2px solid #f00;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #111;
+}
 
+/* Add more styles for the admin page as needed */
