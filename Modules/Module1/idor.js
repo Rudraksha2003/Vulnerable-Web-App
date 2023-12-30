@@ -11,7 +11,7 @@ function attemptLogin() {
     }
 
     // Check if the entered credentials match the test credentials
-    if (username === 'test' && password === 'test') {
+    if (username === 'test' && password === 'p@ssword') {
         // Set a flag in localStorage to indicate that the user is logged in
         localStorage.setItem('isUserLoggedIn', 'true');
 
