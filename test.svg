@@ -1,5 +1,7 @@
 <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="100" cy="100" r="50" fill="blue">
-        <animate attributeName="cx" from="100" to="300" dur="3s" repeatCount="indefinite" />
-    </circle>
+    <defs>
+        <circle id="myCircle" cx="100" cy="100" r="50" fill="blue" />
+    </defs>
+    
+    <use xlink:href="#myCircle" />
 </svg>
