@@ -1,9 +1,9 @@
 <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
     <!-- Define the animation -->
-    <video width="400" height="300" controls>
+  <video width="400" height="300" controls>
   <source src="video.mp4" type="video/mp4">
   <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
   Your browser does not support the video tag.
-</video>
+  </video>
 
 </svg>
