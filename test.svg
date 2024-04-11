@@ -1,8 +1,5 @@
 <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject width="100%" height="100%">
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            <h1>Hello, World!</h1>
-            <p>This is HTML content embedded in an SVG.</p>
-        </div>
-    </foreignObject>
+    <circle cx="100" cy="100" r="50" fill="blue">
+        <animate attributeName="cx" from="100" to="300" dur="3s" repeatCount="indefinite" />
+    </circle>
 </svg>
