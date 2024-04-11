@@ -1,9 +1,24 @@
 <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-    <image id="frame1" x="0" y="0" width="400" height="300" href="frame1.jpg">
-        <animate attributeName="opacity" from="1" to="0" dur="5s" fill="freeze" begin="0s" />
-    </image>
-    <image id="frame2" x="0" y="0" width="400" height="300" href="frame2.jpg">
-        <animate attributeName="opacity" from="0" to="1" dur="5s" fill="freeze" begin="5s" />
+    <!-- Define the animation -->
+    <rect x="0" y="0" width="400" height="300" fill="black">
+        <animate 
+            attributeName="fill-opacity" 
+            values="1;0" 
+            dur="10s" 
+            repeatCount="indefinite" 
+        />
+    </rect>
+    
+    <!-- Include frames of the video as images -->
+    <image 
+        x="0" y="0" 
+        width="400" height="300" 
+        href="frame1.jpg">
+        <animate 
+            attributeName="href" 
+            values="frame1.jpg;frame2.jpg;frame3.jpg" 
+            dur="10s" 
+            repeatCount="indefinite" 
+        />
     </image>
 </svg>
-
