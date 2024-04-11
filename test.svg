@@ -1,13 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" baseProfile="full" version="1.1">
-   <polygon fill="#009900" id="triangle" points="0,0 0,50 50,0" stroke="#004400"/>
-   <form action="http://example.com/login" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br><br>
-
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br><br>
-
-        <input type="submit" value="Login">
-    </form>
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h1>Hello, World!</h1>
+            <p>This is HTML content embedded in an SVG.</p>
+        </div>
+    </foreignObject>
 </svg>
