@@ -1,0 +1,53 @@
+/* Vulnerable web app/user/user.css */
+
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    overflow: auto; /* Enable scrolling */
+    background-size: 400% 400%;
+    animation: backgroundAnimation 20s linear infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.user-info {
+    margin: 20px;
+}
+
+h2 {
+    color: #f00;
+}
+
+button {
+    padding: 10px;
+    background-color: #0f0;
+    color: #000;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #f00;
+    color: #fff;
+}
+
+/* Styles specific to the admin page */
+.admin-info {
+    border: 2px solid #f00;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #111;
+}
+
+/* Add more styles for the admin page as needed */

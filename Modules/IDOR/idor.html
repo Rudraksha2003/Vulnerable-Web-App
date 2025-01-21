@@ -1,0 +1,42 @@
+<!-- Vulnerable web app/Modules/Module1/idor.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="idor.css">
+    <title>IDOR Challenge</title>
+</head>
+<body>
+    <header>
+        <h1>IDOR Challenge</h1>
+    </header>
+
+    <!-- Description for the IDOR Challenge -->
+    <div class="challenge-description">
+        <p>This is a simulation. Use the following credentials:</p>
+        <p><strong>Username:</strong> test</p>
+        <p><strong>Password:</strong> p@ssword</p>
+    </div>
+
+    <!-- Login form -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username*:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password*:</label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Error messages will be displayed here -->
+            <div id="error-messages" class="error-messages"></div>
+
+            <button type="button" onclick="attemptLogin()">Login</button>
+        </form>
+    </div>
+
+    <script src="idor.js"></script>
+</body>
+</html>
