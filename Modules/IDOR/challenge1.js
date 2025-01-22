@@ -1,4 +1,4 @@
-// Vulnerable web app/Modules/Module1/idor.js
+// Vulnerable web app/Modules/IDOR/challenge.js
 
 function attemptLogin() {
     const username = document.getElementById('username').value;
@@ -16,7 +16,7 @@ function attemptLogin() {
         localStorage.setItem('isUserLoggedIn', 'true');
 
         // Redirect to the user dashboard page after successful login
-        window.location.href = '../Module1/user/1.html';
+        window.location.href = 'user/1.html';
     } else {
         // Display an error message for incorrect credentials
         displayError('Incorrect username or password. Please try again.');
@@ -42,6 +42,6 @@ function logout() {
     // Remove the flag from localStorage to indicate that the user is logged out
     localStorage.removeItem('isUserLoggedIn');
     // Redirect to the login page after logging out
-    window.location.href = '../Module1/idor.html';
+    window.location.href = 'challenge1.html';
 }
 

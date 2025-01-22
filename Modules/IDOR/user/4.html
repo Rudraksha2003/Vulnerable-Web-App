@@ -13,7 +13,7 @@
         // Check if the user is not logged in, redirect to the login page
         const isLoggedIn = localStorage.getItem('isUserLoggedIn') === 'true';
         if (!isLoggedIn) {
-            window.location.href = '../idor.html';
+            window.location.href = '../challenge1.html';
         }
 
         // Function to log out the user
@@ -21,7 +21,7 @@
             // Remove the flag from localStorage to indicate that the user is logged out
             localStorage.removeItem('isUserLoggedIn');
             // Redirect to the login page after logging out
-            window.location.href = '../idor.html';
+            window.location.href = '../challenge1.html';
         }
     </script>
 
