@@ -1,4 +1,4 @@
-<!-- Vulnerable web app/Modules/Module1/module1.html -->
+<!-- Vulnerable web app/Modules/IDOR/idor.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,50 +6,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="idor.css">
-    <title>Module 1: Broken Access Control</title>
+    <title>IDOR</title>
 </head>
 <body>
     <header>
-        <h1>Module 1: Broken Access Control</h1>
+        <h1>IDOR Module</h1>
     </header>
 
     <div class="module-content">
+        <!-- Button to access the IDOR challenge -->
+        <a href="challenge1.html" class="idor-button"><b>Click Here to access IDOR Challenge</b></a>
+
         <section>
             <div class="theory-section">
                 <h3>Significance</h3>
                 <p>
-                    Broken Access Control poses a significant threat by allowing unauthorized users to access sensitive information, exposing the security and privacy of the system.
+                    An IDOR (Insecure Direct Object Reference) vulnerability occurs when an application exposes direct access to 
+                    objects (e.g., database records, files, or user data) without proper authorization checks. 
+                    It is significant because attackers can exploit it to access, modify, or delete resources they are not 
+                    authorized to interact with, potentially leading to data breaches or unauthorized actions.
                 </p>
             </div>
 
             <div class="theory-section">
                 <h3>Impact</h3>
                 <p>
-                    The impact includes potential data breaches, exposure of confidential data, and a compromised user experience due to unauthorized access.
+                    The impact of an IDOR vulnerability can be severe. It may compromise sensitive information such as personal user 
+                    data, financial records, or confidential documents. In extreme cases, it can lead to reputational damage, 
+                    legal consequences, or regulatory fines for the affected organization, especially if it violates privacy 
+                    laws like GDPR.
                 </p>
             </div>
 
             <div class="theory-section">
                 <h3>Remediation</h3>
                 <p>
-                    To address Broken Access Control, implement robust access controls, ensure proper user authentication, and regularly audit and enforce permissions.
-                </p>
-            </div>
-
-            <div class="theory-section">
-                <h3>Examples</h3>
-                <p>
-                    Common examples involve insecure session management, insufficient authorization checks, and vulnerabilities related to direct object references.
+                    To remediate IDOR vulnerabilities, always enforce strict access controls and authorization checks 
+                    on every request, not just at the user interface level. Avoid exposing direct references 
+                    (e.g., user IDs or file names) and use indirect or hashed identifiers wherever possible. 
+                    Conduct regular security testing to identify and patch vulnerabilities.
                 </p>
             </div>
         </section>
 
-        <!-- Button to access the IDOR challenge -->
-        <a href="challenge1.html" class="idor-button">Access IDOR Challenge</a>
-
         <!-- Additional content as needed -->
     </div>
 
-    <script src="idor.js"></script>
 </body>
 </html>

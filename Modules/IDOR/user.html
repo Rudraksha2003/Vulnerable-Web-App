@@ -1,10 +1,11 @@
-<!-- Vulnerable web app/user/1.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <link rel="stylesheet" href="user.css">
     <title>User Dashboard</title>
 </head>
@@ -13,7 +14,7 @@
         // Check if the user is not logged in, redirect to the login page
         const isLoggedIn = localStorage.getItem('isUserLoggedIn') === 'true';
         if (!isLoggedIn) {
-            window.location.href = '../challenge1.html';
+            window.location.href = 'challenge1.html';
         }
 
         // Function to log out the user
@@ -21,7 +22,7 @@
             // Remove the flag from localStorage to indicate that the user is logged out
             localStorage.removeItem('isUserLoggedIn');
             // Redirect to the login page after logging out
-            window.location.href = '../challenge1.html';
+            window.location.href = 'challenge1.html';
         }
     </script>
 
@@ -29,17 +30,13 @@
         <h1>User Dashboard</h1>
     </header>
 
-    <!-- Dummy information for user 1 -->
-    <div class="user-info">
-        <h2>User 1 Information</h2>
-        <p><strong>Name:</strong> John Doe</p>
-        <p><strong>Phone Number:</strong> +1 (555) 123-4567</p>
-        <p><strong>Email:</strong> john.doe@example.com</p>
-        <p><strong>Credit Card Number:</strong> **** **** **** 1234</p>
+    <div id="user-content">
+        <p>Loading user data...</p>
     </div>
 
-    <!-- Logout button -->
-    <button onclick="logout()">Logout</button>
+    <button id="logout-button">Logout</button>
+
+
 
     <script src="user.js"></script>
 </body>
