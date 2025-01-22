@@ -29,8 +29,7 @@ function displayUserData(user) {
         ${user.phone ? `<p><strong>Phone:</strong> ${user.phone}</p>` : ""}
         ${user.credit_card ? `<p><strong>Credit Card:</strong> ${user.credit_card}</p>` : ""}
         ${user.access_code ? `<p><strong>Access Code:</strong> ${user.access_code}</p>` : ""}
-        ${user.plans ? `<p><strong>Plans:</strong> ${user.plans}</p>` : ""}
-    `;
+        ${user.plans ? `<p><strong>Plans:</strong> ${user.plans}</p>` : ""}`;
 }
 
 // Function to display an error message
