@@ -1,0 +1,56 @@
+<!-- Vulnerable web app/Modules/XSS/xss.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="xss.css">
+    <title>XSS</title>
+</head>
+<body>
+    <header>
+        <h1>XSS Module</h1>
+    </header>
+
+    <div class="module-content">
+        <!-- Button to access the XSS challenge -->
+        <a href="challenge2.html" class="xss-button"><b>Click Here to access XSS Challenge</b></a>
+
+        <section>
+            <div class="theory-section">
+                <h3>Significance</h3>
+                <p>
+                    Cross-Site Scripting (XSS) is a vulnerability that allows attackers to inject malicious scripts into 
+                    web pages viewed by other users. It is significant because it can be exploited to steal sensitive user data, 
+                    hijack user sessions, or perform unauthorized actions on behalf of the victim, compromising both 
+                    individual users and the application's integrity.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Impact</h3>
+                <p>
+                    The impact of XSS can range from minor nuisances to critical security issues. For example, attackers 
+                    can steal login credentials, deliver malware, or impersonate users. Persistent XSS on high-traffic 
+                    websites can have far-reaching consequences, damaging trust, leading to data leaks, and incurring 
+                    regulatory penalties if user data is mishandled.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Remediation</h3>
+                <p>
+                    To remediate XSS, sanitize and validate all user inputs to remove or neutralize harmful scripts 
+                    before rendering them in the browser. Implement a Content Security Policy (CSP) to limit the execution 
+                    of unauthorized scripts. Encode data properly when displaying it in HTML, JavaScript, or other contexts, 
+                    and avoid directly inserting user input into the DOM.
+                </p>
+            </div>
+        </section>
+
+        <!-- Additional content as needed -->
+    </div>
+
+</body>
+</html>

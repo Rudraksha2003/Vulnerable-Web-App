@@ -1,0 +1,74 @@
+/* File: challenge2.css */
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    overflow: auto; /* Enable scrolling */
+    background-size: 400% 400%;
+    animation: backgroundAnimation 20s linear infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+header {
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #f00;
+}
+
+.challenge-content {
+    margin: auto;
+    max-width: 800px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0f0;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #f00;
+    color: #fff;
+}
+
+.output-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #111;
+    border: 1px solid #0f0;
+    border-radius: 5px;
+    color: #0f0;
+    word-wrap: break-word;
+}

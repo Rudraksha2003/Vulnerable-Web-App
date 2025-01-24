@@ -1,0 +1,30 @@
+<!-- File: challenge2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="challenge2.css">
+    <title>XSS Challenge</title>
+</head>
+<body>
+    <header>
+        <h1>XSS Challenge</h1>
+    </header>
+
+    <div class="challenge-content">
+        <p>Welcome to the XSS Challenge! Inject a payload into the input field below and observe the behavior.</p>
+
+        <!-- Input form for XSS testing -->
+        <form id="xss-form">
+            <label for="xss-input">Enter your payload:</label>
+            <input type="text" id="xss-input" name="xss-input" placeholder="Enter payload here" required>
+            <button type="button" onclick="processInput()">Submit</button>
+        </form>
+
+        <div id="output" class="output-box">Your output will appear here...</div>
+    </div>
+
+    <script src="challenge2.js"></script>
+</body>
+</html>
