@@ -1,0 +1,48 @@
+<!-- Modules/Insecure-Authentication/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Dashboard</h1>
+    </header>
+
+    <main>
+        <div class="dashboard-content">
+            <p id="welcome-message">You have successfully logged in!</p>
+            <div class="user-info">
+                <h2>Account Information</h2>
+                <div class="info">
+                    <span><strong>Username:</strong> admin</span>
+                    <span><strong>Role:</strong> Administrator</span>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Simple validation to check if the user has a session
+        const loggedIn = localStorage.getItem('success');
+        if (!loggedIn) {
+            // Allow attackers to manipulate the response and set `success` to true
+            alert("Access denied. Please log in first!");
+            window.location.href = 'challenge4.html'; // Redirect to login
+        }
+
+        // Logout function to clear localStorage and redirect to login
+        function logout() {
+            localStorage.clear();
+            window.location.href = 'challenge4.html'; // Redirect to login page
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- Modules/SQLi/response.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Response</title>
+    <style>
+        /* Overall page styling */
+        body {
+            font-family: monospace;
+            background-color: #222;
+            color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0f0;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the response box */
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #fff; /* White background */
+            color: #000; /* Black text */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 0 auto;
+            max-width: 80%; /* Makes the response box more compact */
+            overflow: auto; /* Enable scrolling for large responses */
+            text-align: left; /* Align text to the left for readability */
+        }
+    </style>
+</head>
+<body>
+    <h1>API Response</h1>
+    <pre id="response"></pre>
+
+    <script>
+        // Retrieve the API response from localStorage
+        const apiResponse = localStorage.getItem('apiResponse');
+        const responseElement = document.getElementById('response');
+
+        // Display the response or show an error if none exists
+        if (apiResponse) {
+            responseElement.textContent = apiResponse;
+        } else {
+            responseElement.textContent = "No response available.";
+        }
+    </script>
+</body>
+</html>

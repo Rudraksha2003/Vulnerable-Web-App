@@ -1,0 +1,40 @@
+<!-- Vulnerable web app/Modules/Info_Disclosure/challenge5.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="challenge5.css">
+    <title>Info Disclosure Challenge</title>
+</head>
+<body>
+    <header>
+        <h1>Info Disclosure Challenge</h1>
+    </header>
+
+    <!-- Description for the Info Disclosure Challenge -->
+    <div class="challenge-description">
+        <p>Look for any hardcoded credentials disclosure in this challenge</p>
+    </div>
+
+    <!-- Login form -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username*</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password*</label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Error messages will be displayed here -->
+            <div id="error-messages" class="error-messages"></div>
+
+            <button type="button" onclick="attemptLogin()">Login</button>
+        </form>
+    </div>
+
+    <script src="challenge5.js"></script>
+</body>
+</html>

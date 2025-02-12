@@ -13,7 +13,7 @@ firebase.json
 firebase-debug.log
 
 # Functions dependencies
-functions/node_modules/
+functions/*/node_modules/
 
 # Runtime data
 pids
@@ -66,3 +66,9 @@ functions/*/node_modules/
 
 # Local Netlify folder
 .netlify
+
+# Exclude File Upload module
+Modules/File_Upload/
+
+# Allow netlify.toml to be uploaded
+!netlify.toml

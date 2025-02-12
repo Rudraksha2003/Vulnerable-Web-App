@@ -1,0 +1,56 @@
+<!-- project-folder/modules/SQLi/sqli.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sqli.css">
+    <title>SQLi</title>
+</head>
+<body>
+    <header>
+        <h1>SQL injection Module</h1>
+    </header>
+
+    <div class="module-content">
+        <!-- Button to access the SQLi challenge -->
+        <a href="challenge3.html" class="sqli-button"><b>Click Here to access SQLi Challenge</b></a>
+
+        <section>
+            <div class="theory-section">
+                <h3>Significance</h3>
+                <p>
+                    SQL Injection (SQLi) is a vulnerability where attackers manipulate SQL queries by injecting 
+                    malicious input into user-supplied fields. It is significant because it can provide unauthorized 
+                    access to sensitive data, allow attackers to modify or delete database contents, or even execute 
+                    administrative operations on the database.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Impact</h3>
+                <p>
+                    The impact of SQL Injection can be devastating, as it may lead to data breaches, data loss, or 
+                    compromise of the entire database. In severe cases, attackers can gain full control of the 
+                    underlying server, escalate privileges, or disrupt the application's functionality, leading to 
+                    significant financial and reputational losses.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Remediation</h3>
+                <p>
+                    To remediate SQL Injection, always use parameterized queries or prepared statements instead of 
+                    directly embedding user input into SQL queries. Avoid dynamic SQL wherever possible and validate 
+                    and sanitize all user inputs. Additionally, implement least privilege access for database accounts 
+                    and conduct regular security audits to identify and address vulnerabilities.
+                </p>
+            </div>
+        </section>
+
+        <!-- Additional content as needed -->
+    </div>
+
+</body>
+</html>

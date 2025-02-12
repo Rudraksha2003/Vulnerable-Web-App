@@ -1,0 +1,56 @@
+<!-- project-folder/modules/Insecure_Authentication/insecure_auth.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="insecure_auth.css">
+    <title>Insecure Authentication</title>
+</head>
+<body>
+    <header>
+        <h1>Insecure Authentication Module</h1>
+    </header>
+
+    <div class="module-content">
+        <!-- Button to access the insecure_auth challenge -->
+        <a href="challenge4.html" class="insecure_auth-button"><b>Click Here to access Insecure Auth Challenge</b></a>
+
+        <section>
+            <div class="theory-section">
+                <h3>Significance</h3>
+                <p>
+                    Insecure authentication vulnerabilities occur when authentication mechanisms are improperly implemented, 
+                    allowing attackers to manipulate authentication responses and bypass login checks. This is significant 
+                    because it undermines the core security of the application, granting unauthorized access to sensitive 
+                    user accounts or administrative features.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Impact</h3>
+                <p>
+                    The impact of such a vulnerability is critical, as it enables attackers to impersonate legitimate users, 
+                    compromise sensitive data, perform unauthorized actions, and escalate privileges. It can lead to account 
+                    takeovers, data breaches, or even a full system compromise if administrative accounts are affected.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Remediation</h3>
+                <p>
+                    To remediate this issue, ensure the authentication logic is processed securely on the server side and 
+                    is independent of client-side inputs. Use strong session management and implement robust server-side 
+                    validation of login credentials. Protect communication channels with HTTPS, and monitor for anomalous 
+                    authentication attempts. Regularly test for vulnerabilities using tools like Burp Suite or automated 
+                    security scanners.
+                </p>
+            </div>
+        </section>
+
+        <!-- Additional content as needed -->
+    </div>
+
+</body>
+</html>

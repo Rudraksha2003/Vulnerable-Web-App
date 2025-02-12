@@ -1,0 +1,55 @@
+<!-- Vulnerable web app/Modules/Info_Disclosure/info_disclosure.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="info_disclosure.css">
+    <title>Info Disclosure</title>
+</head>
+<body>
+    <header>
+        <h1>Sensitive Information Disclosure Module</h1>
+    </header>
+
+    <div class="module-content">
+        <!-- Button to access the Info_Disclosure challenge -->
+        <a href="challenge5.html" class="info_disclosure-button"><b>Click Here to access Information Disclosure Challenge</b></a>
+
+        <section>
+            <div class="theory-section">
+                <h3>Significance</h3>
+                <p>
+                    Sensitive Information Disclosure vulnerabilities occur when critical data, such as credentials, 
+                    API keys, or other sensitive information, is exposed in source code, logs, or responses. When credentials 
+                    are hardcoded into JavaScript files, attackers can easily retrieve them, especially in client-side applications, 
+                    compromising security.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Impact</h3>
+                <p>
+                    The impact of exposing sensitive information is severe. Attackers can use the hardcoded credentials 
+                    to access backend systems, databases, or third-party services. This can lead to unauthorized data access, 
+                    system compromise, API abuse, or cascading vulnerabilities across interconnected systems.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Remediation</h3>
+                <p>
+                    To remediate this issue, never hardcode sensitive information in JavaScript or any client-facing files. 
+                    Use environment variables or secure vaults to manage credentials securely on the server side. 
+                    Ensure that sensitive data is stored securely and never exposed to the client. Regularly audit 
+                    codebases and repositories for exposed secrets using tools like TruffleHog.
+                </p>
+            </div>
+        </section>
+
+        <!-- Additional content as needed -->
+    </div>
+
+</body>
+</html>

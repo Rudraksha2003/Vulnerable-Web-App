@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="challenge4.css">
+    <title>Insecure Authentication Challenge</title>
+</head>
+<body>
+    <header>
+        <h1>Insecure Authentication Challenge</h1>
+    </header>
+
+    <!-- Description for the Insecure Authentication Challenge -->
+    <div class="challenge-description">
+        <p>Use the login form below to test for insecure authentication vulnerabilities.</p>
+        <p>Intercept and manipulate requests to bypass authentication mechanisms.</p>
+    </div>
+
+    <!-- Login form -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password" required>
+
+            <!-- Response box for messages -->
+            <div id="response-box"></div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="challenge4.js"></script>
+</body>
+</html>
