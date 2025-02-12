@@ -70,5 +70,5 @@ functions/*/node_modules/
 # Exclude File Upload module
 Modules/File_Upload/
 
-# Allow netlify.toml to be uploaded
-!netlify.toml
+# Exclude netlify.toml to be uploaded
+netlify.toml
