@@ -1,7 +1,7 @@
 /**
  * Insecure Authentication Challenge.
- * Response comes from the backend (Netlify function). App then trusts that response.
- * Vulnerability: user can manipulate the displayed response before clicking Proceed to get access.
+ * Response comes from the backend only. Frontend does not display the response.
+ * Vulnerability: intercept the response (e.g. with Burp Suite) and change success to true to get access.
  */
 
 (function () {
@@ -12,11 +12,10 @@
 
         const username = document.getElementById('username').value.trim();
         const password = document.getElementById('password').value;
-        const responseSection = document.getElementById('response-section');
-        const authResponseEl = document.getElementById('auth-response');
+        const messageEl = document.getElementById('auth-message');
 
-        responseSection.style.display = 'block';
-        authResponseEl.value = 'Loading...';
+        messageEl.textContent = '';
+        messageEl.className = 'auth-message';
 
         try {
             const res = await fetch(AUTH_API, {
@@ -25,28 +24,18 @@
                 body: JSON.stringify({ username, password }),
             });
             const data = await res.json();
-            authResponseEl.value = JSON.stringify(data, null, 2);
-        } catch (e) {
-            authResponseEl.value = JSON.stringify({
-                success: false,
-                error: 'Backend unavailable. Deploy to Netlify (or run Netlify Dev) for this challenge.',
-            }, null, 2);
-        }
-    });
 
-    document.getElementById('proceed-btn').addEventListener('click', function () {
-        const authResponseEl = document.getElementById('auth-response');
-
-        try {
-            const data = JSON.parse(authResponseEl.value);
             if (data && data.success === true) {
                 localStorage.setItem('success', 'true');
                 window.location.href = 'dashboard.html';
-            } else {
-                alert('Access denied.');
+                return;
             }
+
+            messageEl.textContent = 'Invalid credentials.';
+            messageEl.classList.add('error');
         } catch (e) {
-            alert('Invalid response.');
+            messageEl.textContent = 'Unable to reach server.';
+            messageEl.classList.add('error');
         }
     });
 })();

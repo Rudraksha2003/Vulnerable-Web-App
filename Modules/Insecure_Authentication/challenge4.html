@@ -27,14 +27,9 @@
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
 
+            <div id="auth-message" class="auth-message" aria-live="polite"></div>
             <button type="submit">Login</button>
         </form>
-
-        <div id="response-section" class="response-section" style="display: none;">
-            <label for="auth-response">Response:</label>
-            <textarea id="auth-response" class="auth-response" rows="4"></textarea>
-            <button type="button" id="proceed-btn" class="btn">Proceed</button>
-        </div>
     </div>
 
     <script src="challenge4.js"></script>
