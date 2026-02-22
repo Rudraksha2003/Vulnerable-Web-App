@@ -121,5 +121,4 @@ This project includes labs for the following web security issues:
 
 🚧 *More vulnerabilities will be added in future updates!*  
 
----
->>>>>>> 6e89bfa353798e64ec0024d1c80998f1ac6d9520
+
