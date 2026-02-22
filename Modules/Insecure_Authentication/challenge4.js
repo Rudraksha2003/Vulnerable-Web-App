@@ -1,14 +1,13 @@
 /**
- * Insecure Authentication Challenge – client-side (no backend).
- * Server returns { success: true } or { success: false }. App trusts that response.
- * Vulnerability: user can manipulate the response (e.g. edit the JSON) to get access.
+ * Insecure Authentication Challenge.
+ * Response comes from the backend (Netlify function). App then trusts that response.
+ * Vulnerability: user can manipulate the displayed response before clicking Proceed to get access.
  */
 
 (function () {
-    const validUsername = 'admin';
-    const validPassword = 'admin123';
+    const AUTH_API = '/.netlify/functions/auth';
 
-    document.getElementById('login-form').addEventListener('submit', function (event) {
+    document.getElementById('login-form').addEventListener('submit', async function (event) {
         event.preventDefault();
 
         const username = document.getElementById('username').value.trim();
@@ -16,11 +15,23 @@
         const responseSection = document.getElementById('response-section');
         const authResponseEl = document.getElementById('auth-response');
 
-        const correct = username === validUsername && password === validPassword;
-        const data = { success: correct };
-        authResponseEl.value = JSON.stringify(data, null, 2);
-
         responseSection.style.display = 'block';
+        authResponseEl.value = 'Loading...';
+
+        try {
+            const res = await fetch(AUTH_API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password }),
+            });
+            const data = await res.json();
+            authResponseEl.value = JSON.stringify(data, null, 2);
+        } catch (e) {
+            authResponseEl.value = JSON.stringify({
+                success: false,
+                error: 'Backend unavailable. Deploy to Netlify (or run Netlify Dev) for this challenge.',
+            }, null, 2);
+        }
     });
 
     document.getElementById('proceed-btn').addEventListener('click', function () {
