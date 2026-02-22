@@ -1,42 +1,31 @@
-// Vulnerable web app/Modules/IDOR/challenge.js
+// IDOR Challenge – client-side login (no backend required).
+// Valid creds: test / p@ssword → redirect to user profile (user=1).
+// The IDOR vuln: users can change the ?user= parameter to access other users' data.
 
 function attemptLogin() {
-    const username = document.getElementById('username').value;
+    const username = document.getElementById('username').value.trim();
     const password = document.getElementById('password').value;
 
-    // Check if both username and password are filled
-    if (username.trim() === '' || password.trim() === '') {
+    if (!username || !password) {
         displayError('Please fill in all the inputs.');
         return;
     }
 
-    // Send the login request to the Netlify function
-    fetch('/api/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.message === 'Login successful') {
-            // Set a flag in localStorage to indicate that the user is logged in
-            localStorage.setItem('isUserLoggedIn', 'true');
+    // Client-side check so the lab works without /api/login (e.g. on static Netlify)
+    const validUsername = 'test';
+    const validPassword = 'p@ssword';
 
-            // Redirect to the user dashboard page using the dynamic user ID
-            window.location.href = `user.html?user=${data.userId}`;
-        } else {
-            // Display error message for incorrect credentials
-            displayError(data.message);
-        }
-    })
-    .catch(error => {
-        displayError('An error occurred. Please try again.');
-    });
+    if (username === validUsername && password === validPassword) {
+        localStorage.setItem('isUserLoggedIn', 'true');
+        // Redirect to "your" profile (user id 1). IDOR: try changing ?user= to 0, 2, 3, 4, 5 in the URL.
+        window.location.href = 'user.html?user=1';
+    } else {
+        displayError('Invalid username or password.');
+    }
 }
 
 function displayError(message) {
-    const errorMessages = document.getElementById('error-messages');
-    errorMessages.innerHTML = `<p>${message}</p>`;
+    const el = document.getElementById('error-messages');
+    el.innerHTML = `<p>${message}</p>`;
+    el.style.display = 'block';
 }
