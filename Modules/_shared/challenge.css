@@ -83,7 +83,7 @@ header h1 {
 .challenge-content {
     max-width: 440px;
     margin: 0 auto 2rem;
-    padding: 1.75rem;
+    padding: 1.75rem 2rem;
     background: var(--ch-card);
     border: 1px solid var(--ch-border);
     border-radius: var(--ch-radius);
@@ -113,7 +113,7 @@ input[type="text"],
 input[type="password"],
 textarea {
     width: 100%;
-    padding: 0.65rem 0.85rem;
+    padding: 0.7rem 1rem;
     margin-bottom: 1rem;
     font-family: inherit;
     font-size: 0.95rem;
@@ -121,6 +121,7 @@ textarea {
     border: 1px solid var(--ch-border);
     border-radius: 6px;
     color: var(--ch-text);
+    box-sizing: border-box;
 }
 
 input:focus,
@@ -133,12 +134,18 @@ textarea:focus {
 #error-messages,
 #response-box {
     margin-bottom: 1rem;
-    padding: 0.6rem;
+    padding: 0.6rem 1rem;
     font-size: 0.9rem;
     border-radius: 6px;
     background: rgba(239, 68, 68, 0.1);
     color: var(--ch-danger);
     text-align: left;
+}
+
+/* Hide error/response block when empty so it doesn’t show a red box before any error */
+.error-messages:empty,
+#error-messages:empty {
+    display: none;
 }
 
 button,
