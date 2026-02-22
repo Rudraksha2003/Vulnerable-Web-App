@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" href="user.css">
+    <title>User Dashboard</title>
+</head>
+<body>
+    <script>
+        // Check if the user is not logged in, redirect to the login page
+        const isLoggedIn = localStorage.getItem('isUserLoggedIn') === 'true';
+        if (!isLoggedIn) {
+            window.location.href = 'challenge1.html';
+        }
+
+        // Function to log out the user
+        function logout() {
+            // Remove the flag from localStorage to indicate that the user is logged out
+            localStorage.removeItem('isUserLoggedIn');
+            // Redirect to the login page after logging out
+            window.location.href = 'challenge1.html';
+        }
+    </script>
+
+    <header>
+        <h1>User Dashboard</h1>
+    </header>
+
+    <div id="user-content">
+        <p>Loading user data...</p>
+    </div>
+
+    <button id="logout-button">Logout</button>
+
+
+
+    <script src="user.js"></script>
+</body>
+</html>

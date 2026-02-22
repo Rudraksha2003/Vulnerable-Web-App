@@ -1,0 +1,122 @@
+/* File: challenge2.css */
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    overflow: auto;
+}
+
+.back-link {
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+}
+
+.back-link a {
+    color: #0f0;
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+header {
+    padding: 30px 0 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #f00;
+}
+
+.challenge-content {
+    margin: auto;
+    max-width: 800px;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+textarea {
+    width: 100%;
+    max-width: 400px;
+    height: 80px;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0f0;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #f00;
+    color: #fff;
+}
+
+.comments {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.comments h2 {
+    margin-bottom: 10px;
+    color: #f00;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+a {
+    color: #0f0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f00;
+    text-decoration: underline;
+}
+
+.output-section {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.output-section h2 {
+    font-size: 1.1em;
+    color: #0f0;
+    margin-bottom: 0.5rem;
+}
+
+.output-box {
+    min-height: 60px;
+    padding: 1rem;
+    background: #111;
+    border: 1px solid #0f0;
+    border-radius: 4px;
+    word-wrap: break-word;
+}

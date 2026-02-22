@@ -1,0 +1,39 @@
+<!-- File: challenge2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="challenge2.css">
+    <title>XSS Challenge</title>
+</head>
+<body>
+    <header>
+        <p class="back-link"><a href="xss.html">← Back to XSS Module</a></p>
+        <h1>XSS Challenge</h1>
+    </header>
+
+    <main class="challenge-content">
+        <form id="xss-form" class="material-form">
+            <div class="form-group">
+                <label for="comment">Leave a comment:</label>
+                <textarea id="xss-input" name="xss-input" class="form-control" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <button type="button" class="btn" onclick="processInput()">Submit</button>
+        </form>
+
+        <div class="comments">
+            <h2>Comments:</h2>
+            <ul id="comment-list">
+                <!-- Dynamically added comments will appear here -->
+            </ul>
+        </div>
+        <div class="output-section">
+            <h2>Comment detail (click a comment above)</h2>
+            <div id="output" class="output-box"></div>
+        </div>
+    </main>
+
+    <script src="challenge2.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Netlify config for Hackers Arena
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "."
+  # No build command needed – static site
+
+# Optional: custom 404 page (create 404.html if you want one)
+# [[redirects]]
+#   from = "/*"
+#   to = "/404.html"
+#   status = 404

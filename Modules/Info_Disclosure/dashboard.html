@@ -1,0 +1,41 @@
+<!-- Vulnerable web app/Modules/Info_Disclosure/dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <script>
+        // Check if the user is logged in, if not redirect to login page
+        const isLoggedIn = localStorage.getItem('isUserLoggedIn') === 'true';
+        if (!isLoggedIn) {
+            window.location.href = 'challenge5.html'; // Redirect to login page if not logged in
+        }
+
+        // Function to log out the user
+        function logout() {
+            localStorage.removeItem('isUserLoggedIn');
+            window.location.href = 'challenge5.html'; // Redirect to login page after logging out
+        }
+    </script>
+
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+
+    <div id="admin-content">
+        <h2>Welcome, Admin!</h2>
+        <p><strong>Notice:</strong> This is a simulated admin dashboard. All sensitive information here is part of the demonstration.</p>
+        <p><strong>Confidential Data:</strong> Here lies sensitive information that can be accessed if credentials are exposed.</p>
+    </div>
+
+    <button onclick="logout()">Logout</button>
+</body>
+</html>

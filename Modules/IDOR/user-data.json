@@ -1,0 +1,38 @@
+{
+    "0": {
+        "name": "Super Admin",
+        "email": "super.admin@example.com",
+        "access_code": "ACME-123-XYZ",
+        "plans": "Classified"
+    },
+    "1": {
+        "name": "John Doe",
+        "phone": "+1 (555) 123-4567",
+        "email": "john.doe@example.com",
+        "credit_card": "**** **** **** 1234"
+    },
+    "2": {
+        "name": "Jane Smith",
+        "phone": "+1 (555) 987-6543",
+        "email": "jane.smith@example.com",
+        "credit_card": "**** **** **** 5678"
+    },
+    "3": {
+        "name": "Alex Johnson",
+        "phone": "+1 (555) 789-0123",
+        "email": "alex.johnson@example.com",
+        "credit_card": "**** **** **** 9012"
+    },
+    "4": {
+        "name": "Chris Davis",
+        "phone": "+1 (555) 345-6789",
+        "email": "chris.davis@example.com",
+        "credit_card": "**** **** **** 3456"
+    },
+    "5": {
+        "name": "Emily White",
+        "phone": "+1 (555) 234-5678",
+        "email": "emily.white@example.com",
+        "credit_card": "**** **** **** 2345"
+    }
+}

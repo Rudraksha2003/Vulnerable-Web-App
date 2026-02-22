@@ -1,0 +1,58 @@
+<!-- Vulnerable web app/Modules/IDOR/idor.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="idor.css">
+    <title>IDOR</title>
+</head>
+<body>
+    <header>
+        <p class="back-link"><a href="../../index.html">← Back to Hackers Arena</a></p>
+        <h1>IDOR Module</h1>
+        <p class="owasp-ref">A01:2025 – Broken Access Control</p>
+    </header>
+
+    <div class="module-content">
+        <!-- Button to access the IDOR challenge -->
+        <a href="challenge1.html" class="idor-button"><b>Click Here to access IDOR Challenge</b></a>
+
+        <section>
+            <div class="theory-section">
+                <h3>Significance</h3>
+                <p>
+                    An IDOR (Insecure Direct Object Reference) vulnerability occurs when an application exposes direct access to 
+                    objects (e.g., database records, files, or user data) without proper authorization checks. 
+                    It is significant because attackers can exploit it to access, modify, or delete resources they are not 
+                    authorized to interact with, potentially leading to data breaches or unauthorized actions.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Impact</h3>
+                <p>
+                    The impact of an IDOR vulnerability can be severe. It may compromise sensitive information such as personal user 
+                    data, financial records, or confidential documents. In extreme cases, it can lead to reputational damage, 
+                    legal consequences, or regulatory fines for the affected organization, especially if it violates privacy 
+                    laws like GDPR.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Remediation</h3>
+                <p>
+                    To remediate IDOR vulnerabilities, always enforce strict access controls and authorization checks 
+                    on every request, not just at the user interface level. Avoid exposing direct references 
+                    (e.g., user IDs or file names) and use indirect or hashed identifiers wherever possible. 
+                    Conduct regular security testing to identify and patch vulnerabilities.
+                </p>
+            </div>
+        </section>
+
+        <!-- Additional content as needed -->
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hackers Arena – OWASP Top 10 2025 vulnerable web app labs for VAPT beginners">
+    <link rel="stylesheet" href="style.css">
+    <title>Hackers Arena – OWASP Top 10 2025 Labs</title>
+</head>
+<body>
+    <header>
+        <h1>Hackers Arena</h1>
+        <p class="tagline">OWASP Top 10 2025 – Web VAPT Labs for Beginners</p>
+    </header>
+
+    <main class="home-main">
+        <p class="intro">Select a lab to learn and practice real-world web vulnerabilities. Each module includes theory and a hands-on challenge.</p>
+
+        <section class="owasp-labs" aria-label="OWASP Top 10 2025 Labs">
+            <h2 class="section-title">OWASP Top 10 2025</h2>
+            <ul class="lab-grid">
+                <!-- A01: Broken Access Control -->
+                <li class="lab-card available">
+                    <a href="Modules/IDOR/idor.html">
+                        <span class="lab-id">A01:2025</span>
+                        <span class="lab-name">Broken Access Control</span>
+                        <span class="lab-desc">IDOR – Insecure Direct Object References</span>
+                        <span class="lab-badge">Lab</span>
+                    </a>
+                </li>
+                <!-- A02: Security Misconfiguration -->
+                <li class="lab-card placeholder">
+                    <a href="Modules/A02_Security_Misconfiguration/coming_soon.html">
+                        <span class="lab-id">A02:2025</span>
+                        <span class="lab-name">Security Misconfiguration</span>
+                        <span class="lab-desc">Default configs, verbose errors, unnecessary features</span>
+                        <span class="lab-badge soon">Coming soon</span>
+                    </a>
+                </li>
+                <!-- A03: Software Supply Chain -->
+                <li class="lab-card placeholder">
+                    <a href="Modules/A03_Supply_Chain/coming_soon.html">
+                        <span class="lab-id">A03:2025</span>
+                        <span class="lab-name">Software Supply Chain Failures</span>
+                        <span class="lab-desc">Vulnerable dependencies, untrusted sources</span>
+                        <span class="lab-badge soon">Coming soon</span>
+                    </a>
+                </li>
+                <!-- A04: Cryptographic Failures -->
+                <li class="lab-card placeholder">
+                    <a href="Modules/A04_Cryptographic_Failures/coming_soon.html">
+                        <span class="lab-id">A04:2025</span>
+                        <span class="lab-name">Cryptographic Failures</span>
+                        <span class="lab-desc">Weak crypto, sensitive data in transit/at rest</span>
+                        <span class="lab-badge soon">Coming soon</span>
+                    </a>
+                </li>
+                <!-- A05: Injection -->
+                <li class="lab-card available">
+                    <a href="Modules/SQli/sqli.html">
+                        <span class="lab-id">A05:2025</span>
+                        <span class="lab-name">Injection</span>
+                        <span class="lab-desc">SQL Injection lab</span>
+                        <span class="lab-badge">Lab</span>
+                    </a>
+                </li>
+                <li class="lab-card available">
+                    <a href="Modules/XSS/xss.html">
+                        <span class="lab-id">A05:2025</span>
+                        <span class="lab-name">Injection (XSS)</span>
+                        <span class="lab-desc">Cross-Site Scripting lab</span>
+                        <span class="lab-badge">Lab</span>
+                    </a>
+                </li>
+                <!-- A06: Insecure Design -->
+                <li class="lab-card placeholder">
+                    <a href="Modules/A06_Insecure_Design/coming_soon.html">
+                        <span class="lab-id">A06:2025</span>
+                        <span class="lab-name">Insecure Design</span>
+                        <span class="lab-desc">Missing threat modeling, flawed business logic</span>
+                        <span class="lab-badge soon">Coming soon</span>
+                    </a>
+                </li>
+                <!-- A07: Authentication Failures -->
+                <li class="lab-card available">
+                    <a href="Modules/Insecure_Authentication/insecure_auth.html">
+                        <span class="lab-id">A07:2025</span>
+                        <span class="lab-name">Authentication Failures</span>
+                        <span class="lab-desc">Insecure auth, session issues, credential handling</span>
+                        <span class="lab-badge">Lab</span>
+                    </a>
+                </li>
+                <!-- A08: Software/Data Integrity -->
+                <li class="lab-card placeholder">
+                    <a href="Modules/A08_Data_Integrity/coming_soon.html">
+                        <span class="lab-id">A08:2025</span>
+                        <span class="lab-name">Software or Data Integrity Failures</span>
+                        <span class="lab-desc">Unsigned updates, insecure deserialization, CI/CD</span>
+                        <span class="lab-badge soon">Coming soon</span>
+                    </a>
+                </li>
+                <!-- A09: Security Logging & Alerting -->
+                <li class="lab-card placeholder">
+                    <a href="Modules/A09_Logging/coming_soon.html">
+                        <span class="lab-id">A09:2025</span>
+                        <span class="lab-name">Security Logging &amp; Alerting Failures</span>
+                        <span class="lab-desc">Missing or insufficient logging and monitoring</span>
+                        <span class="lab-badge soon">Coming soon</span>
+                    </a>
+                </li>
+                <!-- A10: Mishandling of Exceptional Conditions -->
+                <li class="lab-card placeholder">
+                    <a href="Modules/A10_Exceptional_Conditions/coming_soon.html">
+                        <span class="lab-id">A10:2025</span>
+                        <span class="lab-name">Mishandling of Exceptional Conditions</span>
+                        <span class="lab-desc">Improper error handling, stack traces, edge cases</span>
+                        <span class="lab-badge soon">Coming soon</span>
+                    </a>
+                </li>
+                <!-- Info Disclosure (often under A02 / general) -->
+                <li class="lab-card available">
+                    <a href="Modules/Info_Disclosure/info_disclosure.html">
+                        <span class="lab-id">A02 / Info</span>
+                        <span class="lab-name">Sensitive Information Disclosure</span>
+                        <span class="lab-desc">Hardcoded secrets, exposed data in client/server</span>
+                        <span class="lab-badge">Lab</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="home-footer">
+        <p>For educational and authorized testing only. Do not use against systems you do not own or have permission to test.</p>
+    </footer>
+</body>
+</html>
