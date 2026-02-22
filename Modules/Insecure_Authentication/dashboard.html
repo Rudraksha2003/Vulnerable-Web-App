@@ -34,15 +34,13 @@
         // Simple validation to check if the user has a session
         const loggedIn = localStorage.getItem('success');
         if (!loggedIn) {
-            // Allow attackers to manipulate the response and set `success` to true
             alert("Access denied. Please log in first!");
-            window.location.href = 'challenge4.html'; // Redirect to login
+            window.location.replace('challenge4.html');
         }
 
-        // Logout function to clear localStorage and redirect to login
         function logout() {
             localStorage.clear();
-            window.location.href = 'challenge4.html'; // Redirect to login page
+            window.location.replace('challenge4.html');
         }
     </script>
 </body>
