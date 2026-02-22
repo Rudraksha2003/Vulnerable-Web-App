@@ -1,39 +1,41 @@
-document.getElementById('login-form').addEventListener('submit', async (event) => {
-    event.preventDefault();
+/**
+ * Insecure Authentication Challenge – client-side (no backend).
+ * Server returns { success: true } or { success: false }. App trusts that response.
+ * Vulnerability: user can manipulate the response (e.g. edit the JSON) to get access.
+ */
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const responseBox = document.getElementById('response-box');
+(function () {
+    const validUsername = 'admin';
+    const validPassword = 'admin123';
 
-    try {
-        const response = await fetch('/api/auth-manipulation', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, password })
-        });
+    document.getElementById('login-form').addEventListener('submit', function (event) {
+        event.preventDefault();
 
-        const data = await response.json();
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value;
+        const responseSection = document.getElementById('response-section');
+        const authResponseEl = document.getElementById('auth-response');
 
-        // Show the response message
-        responseBox.style.display = 'block';
+        const correct = username === validUsername && password === validPassword;
+        const data = { success: correct };
+        authResponseEl.value = JSON.stringify(data, null, 2);
 
-        if (data.success) {
-            // Set the session to simulate login
-            localStorage.setItem('success', 'true');
+        responseSection.style.display = 'block';
+    });
 
-            responseBox.textContent = "Login Successful!";
-            responseBox.style.color = 'green';
+    document.getElementById('proceed-btn').addEventListener('click', function () {
+        const authResponseEl = document.getElementById('auth-response');
 
-            // Redirect to the dashboard
-            window.location.href = 'dashboard.html';
-        } else {
-            responseBox.textContent = "Invalid Credentials!";
-            responseBox.style.color = 'red';
+        try {
+            const data = JSON.parse(authResponseEl.value);
+            if (data && data.success === true) {
+                localStorage.setItem('success', 'true');
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Access denied.');
+            }
+        } catch (e) {
+            alert('Invalid response.');
         }
-    } catch (err) {
-        console.error('Error:', err);
-        responseBox.style.display = 'block';
-        responseBox.textContent = "An error occurred. Please try again.";
-        responseBox.style.color = 'orange';
-    }
-});
+    });
+})();

@@ -13,13 +13,11 @@
         <h1>Insecure Authentication Challenge</h1>
     </header>
 
-    <!-- Description for the Insecure Authentication Challenge -->
     <div class="challenge-description">
         <p>Use the login form below to test for insecure authentication vulnerabilities.</p>
-        <p>Intercept and manipulate requests to bypass authentication mechanisms.</p>
+        <p>Think about how the application decides whether to grant access.</p>
     </div>
 
-    <!-- Login form -->
     <div class="login-container">
         <h2>Login</h2>
         <form id="login-form">
@@ -27,13 +25,16 @@
             <input type="text" id="username" name="username" required>
 
             <label for="password">Password</label>
-            <input type="text" id="password" name="password" required>
-
-            <!-- Response box for messages -->
-            <div id="response-box"></div>
+            <input type="password" id="password" name="password" required>
 
             <button type="submit">Login</button>
         </form>
+
+        <div id="response-section" class="response-section" style="display: none;">
+            <label for="auth-response">Response:</label>
+            <textarea id="auth-response" class="auth-response" rows="4"></textarea>
+            <button type="button" id="proceed-btn" class="btn">Proceed</button>
+        </div>
     </div>
 
     <script src="challenge4.js"></script>
