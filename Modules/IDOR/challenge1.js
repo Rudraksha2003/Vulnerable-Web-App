@@ -17,7 +17,6 @@ function attemptLogin() {
 
     if (username === validUsername && password === validPassword) {
         localStorage.setItem('isUserLoggedIn', 'true');
-        // Redirect to "your" profile (user id 1). IDOR: try changing ?user= to 0, 2, 3, 4, 5 in the URL.
         window.location.href = 'user.html?user=1';
     } else {
         displayError('Invalid username or password.');

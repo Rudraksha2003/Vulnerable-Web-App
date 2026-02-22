@@ -23,7 +23,7 @@ function attemptLogin() {
         window.location.href = 'dashboard.html';
     } else {
         // Display an error for incorrect credentials
-        displayError('Incorrect username or password. <br>Hint: Look for the js file :)');
+        displayError('Incorrect username or password.');
     }
 }
 

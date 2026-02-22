@@ -11,7 +11,7 @@ function loadUserData() {
                 const user = data[userId];
                 displayUserData(user);
             } else {
-                displayError("User not found or invalid. <br>Hint: See all the <b>'Whole Numbers'</b> :)");
+                displayError("User not found or invalid.");
             }
         })
         .catch(error => {
