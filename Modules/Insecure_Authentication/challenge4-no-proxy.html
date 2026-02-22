@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../_shared/challenge.css">
     <link rel="stylesheet" href="challenge4.css">
-    <title>Insecure Authentication Challenge | Hackers Arena</title>
+    <title>Insecure Authentication (No Proxy) | Hackers Arena</title>
 </head>
 <body>
     <header>
-        <p class="back-link"><a href="insecure_auth.html">← Back to Auth Module</a></p>
+        <p class="back-link"><a href="challenge4.html">← Back to Auth Challenge</a></p>
         <h1>Insecure Authentication Challenge</h1>
     </header>
 
     <div class="challenge-description">
-        <p>Use the login form below to test for insecure authentication vulnerabilities.</p>
-        <p>Think about how the application decides whether to grant access.</p>
+        <p>Same lab — response is shown below so you can try it without an interception tool.</p>
+        <p>Use the login form, then try editing the response before clicking Proceed.</p>
     </div>
 
     <div class="login-container">
@@ -27,15 +27,16 @@
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
 
-            <div id="auth-message" class="auth-message" aria-live="polite"></div>
             <button type="submit">Login</button>
         </form>
 
-        <p class="no-proxy-link">
-            Don't have an interception proxy tool like Burp Suite? <a href="challenge4-no-proxy.html">Click here</a> for a version where you can try the same lab on the page.
-        </p>
+        <div id="response-section" class="response-section" style="display: none;">
+            <label for="auth-response">Response (you can edit this):</label>
+            <textarea id="auth-response" class="auth-response" rows="4"></textarea>
+            <button type="button" id="proceed-btn" class="btn">Proceed</button>
+        </div>
     </div>
 
-    <script src="challenge4.js"></script>
+    <script src="challenge4-no-proxy.js"></script>
 </body>
 </html>

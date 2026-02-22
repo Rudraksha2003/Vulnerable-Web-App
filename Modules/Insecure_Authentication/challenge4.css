@@ -12,3 +12,52 @@
 .auth-message.error {
     color: var(--ch-danger);
 }
+
+/* No-proxy page: show and edit response */
+.no-proxy-link {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--ch-border);
+    font-size: 0.9rem;
+    color: var(--ch-muted);
+}
+
+.no-proxy-link a {
+    color: var(--ch-accent);
+    text-decoration: none;
+}
+
+.no-proxy-link a:hover {
+    text-decoration: underline;
+}
+
+.response-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--ch-border);
+}
+
+.response-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.auth-response {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background: var(--ch-bg);
+    border: 1px solid var(--ch-border);
+    border-radius: 6px;
+    color: var(--ch-text);
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.auth-response:focus {
+    outline: none;
+    border-color: var(--ch-accent);
+}
