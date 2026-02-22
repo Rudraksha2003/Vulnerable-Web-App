@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Modules/IDOR/challenge1.css */
+=======
+/* Vulnerable web app/MOdules/IDOR/challenge.css */
+>>>>>>> 6e89bfa353798e64ec0024d1c80998f1ac6d9520
 
 body {
     background-color: #000;
@@ -20,6 +24,7 @@ body {
     }
 }
 
+<<<<<<< HEAD
 .back-link {
     margin: 0 0 0.5rem;
     font-size: 0.9rem;
@@ -34,6 +39,8 @@ body {
     text-decoration: underline;
 }
 
+=======
+>>>>>>> 6e89bfa353798e64ec0024d1c80998f1ac6d9520
 .challenge-description {
     margin: 20px;
 }

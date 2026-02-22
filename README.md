@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hackers Arena – OWASP Top 10 2025 Labs
 
 **A vulnerable web application for beginners in web application VAPT (Vulnerability Assessment and Penetration Testing).**
@@ -91,3 +92,34 @@ Each **active lab** typically has:
 ## Disclaimer
 
 This project is for **education and authorized security testing only**. Use only in environments you own or have explicit permission to test. The authors are not responsible for misuse.
+=======
+# 🛡️ Vulnerable Web App - Hackers Arena
+
+🚀 **Live Demo**: [Hackers Arena](https://hackers-arena.netlify.app/)  
+
+This is a **CTF-style vulnerable web application** designed for security enthusiasts to practice **ethical hacking** techniques and learn about **OWASP Top 10 vulnerabilities**. The project simulates real-world security flaws, making it a great playground for **bug hunters, pentesters, and security researchers**.
+
+---
+
+## 📌 Features
+✅ **Multiple Security Labs** covering common web vulnerabilities  
+✅ **Interactive Challenges** with realistic exploitation scenarios  
+✅ **Serverless Architecture** hosted on **Netlify**  
+✅ **No Database Required** – Focused on security testing  
+✅ **Educational Purpose Only** – Learn secure coding & best practices  
+
+---
+
+## 🔥 Vulnerabilities Covered
+This project includes labs for the following web security issues:
+
+- **[IDOR (Insecure Direct Object References)](Modules/IDOR/)**  
+- **[XSS (Cross-Site Scripting)](Modules/XSS/)**  
+- **[SQL Injection](Modules/SQLi/)**  
+- **[Insecure Authentication](Modules/Insecure_Authentication/)**  
+- **[Information Disclosure](Modules/Info_Disclosure/)**  
+
+🚧 *More vulnerabilities will be added in future updates!*  
+
+---
+>>>>>>> 6e89bfa353798e64ec0024d1c80998f1ac6d9520

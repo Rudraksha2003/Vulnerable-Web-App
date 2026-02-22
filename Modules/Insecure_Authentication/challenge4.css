@@ -19,6 +19,7 @@ body {
     }
 }
 
+<<<<<<< HEAD
 .back-link {
     margin: 0 0 0.5rem;
     font-size: 0.9rem;
@@ -33,6 +34,8 @@ body {
     text-decoration: underline;
 }
 
+=======
+>>>>>>> 6e89bfa353798e64ec0024d1c80998f1ac6d9520
 header h1 {
     margin-top: 20px;
     color: #f00;

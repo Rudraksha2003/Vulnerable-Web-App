@@ -8,6 +8,7 @@ body {
     overflow: auto;
 }
 
+<<<<<<< HEAD
 .back-link {
     margin: 0 0 0.5rem;
     font-size: 0.9rem;
@@ -24,6 +25,10 @@ body {
 
 header {
     padding: 30px 0 20px;
+=======
+header {
+    padding: 50px 0;
+>>>>>>> 6e89bfa353798e64ec0024d1c80998f1ac6d9520
 }
 
 h1 {
@@ -100,6 +105,7 @@ a:hover {
     color: #f00;
     text-decoration: underline;
 }
+<<<<<<< HEAD
 
 .output-section {
     margin-top: 2rem;
@@ -120,3 +126,5 @@ a:hover {
     border-radius: 4px;
     word-wrap: break-word;
 }
+=======
+>>>>>>> 6e89bfa353798e64ec0024d1c80998f1ac6d9520
