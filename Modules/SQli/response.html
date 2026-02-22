@@ -14,13 +14,14 @@
             padding: 1.25rem;
             border: 1px solid var(--ch-border);
             border-radius: 8px;
-            max-width: 720px;
+            max-width: 640px;
             margin: 0 auto;
             overflow: auto;
             text-align: left;
             font-size: 0.9rem;
         }
-        .response-page .back-link { margin-bottom: 1rem; }
+        .response-page header { max-width: 640px; }
+        .response-page .back-link { max-width: 640px; margin-left: auto; margin-right: auto; padding: 0 1.5rem; }
     </style>
 </head>
 <body class="response-page">
@@ -28,7 +29,7 @@
     <header>
         <h1>API Response</h1>
     </header>
-    <div style="max-width: 720px; margin: 0 auto 2rem; padding: 0 1rem;">
+    <div style="max-width: 640px; margin: 0 auto 2rem; padding: 0 1.5rem;">
         <pre id="response"></pre>
     </div>
     <script>

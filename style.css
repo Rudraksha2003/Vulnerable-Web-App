@@ -120,6 +120,7 @@ h1 {
     color: var(--text);
     transition: border-color 0.2s, background 0.2s, transform 0.15s;
     box-shadow: var(--shadow);
+    text-align: left;
 }
 
 .lab-card a:hover {

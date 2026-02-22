@@ -1,9 +1,5 @@
 /* XSS challenge – overrides only (base in _shared/challenge.css) */
 
-.challenge-content {
-    max-width: 560px;
-}
-
 .form-group {
     margin-bottom: 1rem;
 }

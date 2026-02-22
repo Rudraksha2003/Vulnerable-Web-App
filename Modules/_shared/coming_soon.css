@@ -37,9 +37,24 @@ body::after {
     pointer-events: none;
 }
 
+/* Single column alignment */
+.cs-width {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+}
+
+body {
+    padding: 2rem 0 3rem;
+}
+
 .back-link {
-    margin: 0 0 1rem;
+    max-width: 560px;
+    margin: 0 auto 1rem;
+    padding: 0 1.5rem;
     font-size: 0.9rem;
+    text-align: left;
 }
 
 .back-link a {
@@ -52,20 +67,26 @@ body::after {
 }
 
 h1 {
+    max-width: 560px;
+    margin: 0 auto 0.5rem;
+    padding: 0 1.5rem;
     color: var(--cs-accent);
     font-size: clamp(1.35rem, 3vw, 1.75rem);
     font-weight: 700;
-    margin: 0 0 0.5rem;
+    text-align: left;
 }
 
 .owasp-id {
+    max-width: 560px;
+    margin: 0 auto 1.5rem;
+    padding: 0 1.5rem;
     font-size: 0.9rem;
     color: var(--cs-muted);
-    margin: 0 0 1.5rem;
+    text-align: left;
 }
 
 .content {
-    max-width: 640px;
+    max-width: 560px;
     margin: 0 auto;
     padding: 0 1.5rem;
     text-align: left;
@@ -98,6 +119,7 @@ h1 {
     font-weight: 600;
     font-size: 0.95rem;
     transition: background 0.2s, transform 0.1s;
+    text-align: center;
 }
 
 .home-link:hover {
