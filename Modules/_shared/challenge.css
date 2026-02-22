@@ -1,0 +1,208 @@
+/* Shared styles for challenge pages (login forms, buttons, etc.) */
+
+:root {
+    --ch-bg: #0c0f14;
+    --ch-card: #151a22;
+    --ch-text: #b8c4d4;
+    --ch-muted: #6b7a8f;
+    --ch-accent: #22c55e;
+    --ch-accent-hover: #4ade80;
+    --ch-danger: #ef4444;
+    --ch-border: rgba(34, 197, 94, 0.25);
+    --ch-radius: 10px;
+    --ch-font: 'DM Mono', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;0,600&display=swap');
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--ch-bg);
+    color: var(--ch-text);
+    font-family: var(--ch-font);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        linear-gradient(rgba(34, 197, 94, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+}
+
+.back-link {
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+}
+
+.back-link a {
+    color: var(--ch-accent);
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    color: var(--ch-accent-hover);
+}
+
+header {
+    padding: 2rem 1.5rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--ch-accent);
+    margin: 0 0 0.5rem;
+}
+
+.challenge-description {
+    max-width: 520px;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem;
+    font-size: 0.95rem;
+    color: var(--ch-muted);
+}
+
+.challenge-description p {
+    margin: 0 0 0.5rem;
+}
+
+.login-container,
+.challenge-content {
+    max-width: 400px;
+    margin: 0 auto 2rem;
+    padding: 1.75rem;
+    background: var(--ch-card);
+    border: 1px solid var(--ch-border);
+    border-radius: var(--ch-radius);
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.login-container h2,
+.challenge-content h2 {
+    font-size: 1.1rem;
+    color: var(--ch-accent);
+    margin: 0 0 1.25rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: var(--ch-text);
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: var(--ch-bg);
+    border: 1px solid var(--ch-border);
+    border-radius: 6px;
+    color: var(--ch-text);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--ch-accent);
+}
+
+.error-messages,
+#error-messages,
+#response-box {
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--ch-danger);
+}
+
+button,
+.btn {
+    padding: 0.7rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: var(--ch-accent);
+    color: var(--ch-bg);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover,
+.btn:hover {
+    background: var(--ch-accent-hover);
+    transform: translateY(-1px);
+}
+
+.comments {
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+}
+
+.comments h2 {
+    font-size: 1rem;
+    color: var(--ch-accent);
+    margin-bottom: 0.75rem;
+}
+
+#comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#comment-list li {
+    margin-bottom: 0.5rem;
+}
+
+#comment-list a {
+    color: var(--ch-accent);
+    text-decoration: none;
+}
+
+#comment-list a:hover {
+    text-decoration: underline;
+}
+
+.output-section {
+    max-width: 520px;
+    margin: 2rem auto 0;
+    padding: 0 1rem;
+}
+
+.output-section h2 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.output-box,
+#output {
+    min-height: 60px;
+    padding: 1rem;
+    background: var(--ch-bg);
+    border: 1px solid var(--ch-border);
+    border-radius: 6px;
+    word-wrap: break-word;
+}
