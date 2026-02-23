@@ -39,12 +39,22 @@
     </header>
     <div style="max-width: 640px; margin: 0 auto 2rem; padding: 0 1.5rem;">
         <pre id="response"></pre>
+        <div id="flag-box" class="flag-box" style="display: none; margin-top: 1.5rem; padding: 1rem 1.25rem; background: rgba(34, 197, 94, 0.1); border: 1px solid var(--ch-border); border-radius: 8px;">
+            <code id="flag-value" style="display: block; font-size: 1rem; font-weight: 600; color: var(--ch-accent); word-break: break-all;">FLAG{A05_SQLi_Bypass_Login}</code>
+        </div>
     </div>
     <script>
         const apiResponse = localStorage.getItem('apiResponse');
         const responseElement = document.getElementById('response');
+        const flagBox = document.getElementById('flag-box');
         if (apiResponse) {
             responseElement.textContent = apiResponse;
+            try {
+                const data = JSON.parse(apiResponse);
+                if (data && data.success === true) {
+                    flagBox.style.display = 'block';
+                }
+            } catch (e) {}
         } else {
             responseElement.textContent = "No response available.";
         }

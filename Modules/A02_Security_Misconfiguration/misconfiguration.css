@@ -1,0 +1,46 @@
+/* A02 Security Misconfiguration module – overrides only (theme in _shared/theme.css) */
+
+.module-content section {
+    margin-top: 0.5rem;
+}
+
+.misconfiguration-button {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    background: var(--mod-accent);
+    color: var(--mod-bg);
+    text-decoration: none;
+    border-radius: var(--mod-radius-sm);
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.misconfiguration-button:hover {
+    background: var(--mod-accent-hover);
+}
+
+.challenge-links {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.challenge-links li {
+    margin: 0.5rem 0;
+}
+
+.challenge-links a {
+    color: var(--mod-accent);
+    text-decoration: none;
+}
+
+.challenge-links a:hover {
+    text-decoration: underline;
+}
+
+.lab-hint {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--mod-text-muted);
+}

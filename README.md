@@ -23,7 +23,7 @@ This is a **CTF-style vulnerable web app** for security enthusiasts to practice 
 | ID | Category | Status | Module / Notes |
 |----|----------|--------|-----------------|
 | **A01:2025** | Broken Access Control | ✅ Lab | [IDOR](Modules/IDOR/) – Insecure Direct Object References |
-| **A02:2025** | Security Misconfiguration | 🚧 Coming soon | Placeholder + [Info Disclosure](Modules/Info_Disclosure/) (sensitive data exposure) |
+| **A02:2025** | Security Misconfiguration | ✅ Lab | [Security Misconfiguration](Modules/A02_Security_Misconfiguration/) – default accounts, directory listing, verbose errors, security headers. See [LABS.md](Modules/A02_Security_Misconfiguration/LABS.md) for lab plan. |
 | **A03:2025** | Software Supply Chain Failures | 🚧 Coming soon | Placeholder |
 | **A04:2025** | Cryptographic Failures | 🚧 Coming soon | Placeholder |
 | **A05:2025** | Injection | ✅ Labs | [SQL Injection](Modules/SQli/), [XSS](Modules/XSS/) |

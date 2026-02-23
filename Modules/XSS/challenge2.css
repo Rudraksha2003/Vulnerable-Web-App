@@ -7,3 +7,40 @@
 .form-group label {
     display: block;
 }
+
+.flag-hint {
+    max-width: 440px;
+    margin: 1.5rem auto 0.5rem;
+    font-size: 0.9rem;
+    color: var(--ch-muted);
+}
+
+.flag-hint code {
+    background: rgba(34, 197, 94, 0.15);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.flag-box {
+    max-width: 440px;
+    margin: 2rem auto 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid var(--ch-border);
+    border-radius: var(--ch-radius);
+}
+
+.flag-box h2 {
+    font-size: 0.95rem;
+    color: var(--ch-muted);
+    margin: 0 0 0.5rem;
+}
+
+.flag-value {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ch-accent);
+    word-break: break-all;
+}

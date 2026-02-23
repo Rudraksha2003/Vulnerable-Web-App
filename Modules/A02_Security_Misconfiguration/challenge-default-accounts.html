@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../_shared/challenge.css">
+    <title>Default Accounts &amp; Sample Apps | A02 Security Misconfiguration</title>
+</head>
+<body>
+    <header>
+        <p class="back-link"><a href="misconfiguration.html">← Back to Security Misconfiguration</a></p>
+        <h1>Sample Admin Console</h1>
+    </header>
+
+    <div class="challenge-description">
+        <p>A sample application was left on the production server and was never removed. This “Admin Console” is one of those sample apps.</p>
+        <p><strong>Your goal:</strong> Gain access to the admin console. Hint: sample applications often ship with default accounts that were never changed.</p>
+    </div>
+
+    <div class="login-container">
+        <h2>Admin Console Login</h2>
+        <form id="login-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required autocomplete="username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required autocomplete="current-password">
+
+            <div id="error-messages" class="error-messages" aria-live="polite"></div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="challenge-default-accounts.js"></script>
+</body>
+</html>

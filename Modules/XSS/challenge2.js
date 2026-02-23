@@ -1,4 +1,10 @@
 // File: challenge2.js
+// When reflected XSS runs, the payload can call this to reveal the flag.
+window.revealXSSFlag = function () {
+    var box = document.getElementById("xss-flag-box");
+    if (box) box.style.display = "block";
+};
+
 function processInput() {
     const userInput = document.getElementById("xss-input").value;
 
