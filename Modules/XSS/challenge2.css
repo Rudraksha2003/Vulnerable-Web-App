@@ -21,9 +21,20 @@
     width: 100%;
 }
 
-.flag-hint {
+.hint-row {
     max-width: 440px;
     margin: 1.5rem auto 0.5rem;
+}
+
+.hint-row .btn-hint {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.flag-hint {
+    max-width: 440px;
+    margin: 0.75rem 0 0.5rem;
     font-size: 0.9rem;
     color: var(--ch-muted);
 }

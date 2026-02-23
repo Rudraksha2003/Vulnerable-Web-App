@@ -1,9 +1,34 @@
 // File: challenge2.js
+var XSS_FLAG = "FLAG{A05_XSS_Reflected_Script}";
+
 // When reflected XSS runs, the payload can call this to reveal the flag.
 window.revealXSSFlag = function () {
     var box = document.getElementById("xss-flag-box");
-    if (box) box.style.display = "block";
+    var valueEl = document.getElementById("xss-flag-value");
+    if (box) {
+        if (valueEl) valueEl.textContent = XSS_FLAG;
+        box.style.display = "block";
+    }
 };
+
+(function () {
+    var getHintBtn = document.getElementById("get-hint-btn");
+    var hintContainer = document.getElementById("hint-container");
+    if (getHintBtn && hintContainer) {
+        getHintBtn.addEventListener("click", function () {
+            if (hintContainer.children.length === 0) {
+                var p = document.createElement("p");
+                p.textContent = "When you successfully execute reflected XSS, call ";
+                var code = document.createElement("code");
+                code.textContent = "revealXSSFlag()";
+                p.appendChild(code);
+                p.appendChild(document.createTextNode(" in your payload to reveal the flag."));
+                hintContainer.appendChild(p);
+            }
+            hintContainer.style.display = hintContainer.style.display === "none" ? "block" : "none";
+        });
+    }
+})();
 
 function processInput() {
     const userInput = document.getElementById("xss-input").value;

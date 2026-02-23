@@ -91,7 +91,8 @@ header h1 {
 .module-content > .sqli-button,
 .module-content > .insecure_auth-button,
 .module-content > .info_disclosure-button,
-.module-content > .supply_chain-button {
+.module-content > .supply_chain-button,
+.module-content > .crypto-button {
     display: block;
     width: fit-content;
     margin: 1rem auto 1.5rem;
@@ -143,7 +144,8 @@ header h1 {
 .module-content .sqli-button:hover,
 .module-content .insecure_auth-button:hover,
 .module-content .info_disclosure-button:hover,
-.module-content .supply_chain-button:hover {
+.module-content .supply_chain-button:hover,
+.module-content .crypto-button:hover {
     background: var(--mod-accent-hover);
     transform: translateY(-1px);
 }

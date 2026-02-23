@@ -33,9 +33,12 @@
             <h2>Comment detail (click a comment above)</h2>
             <div id="output" class="output-box"></div>
         </div>
-        <p class="flag-hint">When you successfully execute reflected XSS, call <code>revealXSSFlag()</code> in your payload to reveal the flag.</p>
+        <div class="hint-row">
+            <button type="button" class="btn btn-hint" id="get-hint-btn">Get hint</button>
+            <div id="hint-container" class="flag-hint" style="display: none;"></div>
+        </div>
         <div class="flag-box" id="xss-flag-box" style="display: none;">
-            <code class="flag-value">FLAG{A05_XSS_Reflected_Script}</code>
+            <code class="flag-value" id="xss-flag-value"></code>
         </div>
     </main>
 

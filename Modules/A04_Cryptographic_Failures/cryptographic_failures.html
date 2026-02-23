@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../_shared/theme.css">
+    <link rel="stylesheet" href="cryptographic_failures.css">
+    <title>A04:2025 – Cryptographic Failures | Hackers Arena</title>
+</head>
+<body>
+    <header>
+        <p class="back-link"><a href="../../index.html">← Back to Hackers Arena</a></p>
+        <h1>Cryptographic Failures</h1>
+        <p class="owasp-ref">A04:2025 – Cryptographic Failures</p>
+    </header>
+
+    <div class="module-content">
+        <p class="intro">Cryptographic failures occur when sensitive data is not protected properly: weak or deprecated algorithms, missing or weak encryption in transit or at rest, poor key management, or storing passwords with unsalted or fast hashes that can be cracked with rainbow tables or GPU attacks.</p>
+
+        <a href="challenge-weak-hashes.html" class="crypto-button"><b>Click Here to access Cryptographic Failures Challenge</b></a>
+        <p class="intro lab-hint">One lab: a <strong>leaked password database</strong> uses unsalted hashes. Your goal: recover an admin password by cracking the hash (e.g. with a wordlist), then submit it to get the flag—like real breaches where unsalted or simple hashes are exposed.</p>
+
+        <section>
+            <div class="theory-section">
+                <h3>Significance</h3>
+                <p>
+                    Data in transit should be encrypted (e.g. TLS). Passwords, payment data, and health records need extra protection. Sites that do not enforce TLS can be downgraded so attackers intercept session cookies or alter data. Password databases that use unsalted or simple hashes (e.g. MD5, SHA1, or fast hashes without salt) let attackers with a copy of the DB crack passwords via rainbow tables or GPU cracking.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Impact</h3>
+                <p>
+                    Missing or weak encryption leads to stolen credentials, session hijacking, or tampering with data. Unsalted or weak password hashes allow bulk password recovery after a breach; fast hashes (even when salted) can be cracked by GPUs. Default or hardcoded keys, keys in source control, or weak randomness increase the risk of decryption or forgery.
+                </p>
+            </div>
+
+            <div class="theory-section">
+                <h3>Remediation</h3>
+                <p>
+                    Use TLS for all traffic; avoid deprecated algorithms (MD5, SHA1 for security-sensitive use). Store passwords with a strong, slow, salted hash (e.g. Argon2, bcrypt, scrypt). Use proper key management and rotation; do not commit keys to repos. Prefer authenticated encryption; avoid ECB mode and weak IVs. Use cryptographically secure randomness where needed.
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../_shared/theme.css">
+    <link rel="stylesheet" href="../_shared/challenge.css">
+    <link rel="stylesheet" href="challenge-weak-hashes.css">
+    <title>Leaked Password Database | A04 Cryptographic Failures</title>
+</head>
+<body>
+    <header>
+        <p class="back-link"><a href="cryptographic_failures.html">← Back to Cryptographic Failures</a></p>
+        <h1>Leaked Password Database</h1>
+        <p class="subtitle">Unsalted hashes – crack one to recover the admin password</p>
+    </header>
+
+    <div class="challenge-description practical-desc">
+        <p>A <strong>sample env file</strong> (or similar config) was left on the server and is exposed. Passwords in this app are stored as <strong>unsalted SHA-256</strong>. Your goal: find the leaked hashes, recover the <strong>admin</strong> password, then log in with the admin account below to get the flag.</p>
+    </div>
+
+    <div class="app-container">
+        <div class="app-card">
+            <h2>Find the leaked hashes</h2>
+            <p class="app-intro">The password hashes are not on this page. In real sites they might be in a backup, a sample config, or a file that was never removed. Look for a file in the same path as this challenge (e.g. <code>env.sample</code>, <code>backup.txt</code>, or similar). Once you have the admin hash and recover the password, use the credentials to log in below.</p>
+            <div id="hint-container" class="hint-link" style="display: none;"></div>
+
+            <div class="login-section">
+                <h3>Login</h3>
+                <p class="login-hint">Use the username and the password you recovered from the hash.</p>
+                <form id="login-form" class="login-form">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Username" autocomplete="username">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password">
+                    <div class="login-actions">
+                        <button type="button" id="get-hint-btn">Get hint</button>
+                        <button type="submit" id="login-btn">Login</button>
+                    </div>
+                </form>
+                <p id="login-message" class="login-message"></p>
+            </div>
+
+            <div id="flag-output" class="flag-section" style="display: none;">
+                <h3>Flag</h3>
+                <div class="flag-box"><code id="flag-value"></code></div>
+                <div class="debrief">
+                    <h4>What happened?</h4>
+                    <p>Passwords were stored as unsalted SHA-256—no salt and fast to compute, so they can be cracked with wordlists or rainbow tables. <strong>Remediation:</strong> Store passwords with a strong, slow, salted hash (e.g. Argon2, bcrypt, or scrypt).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="challenge-weak-hashes.js"></script>
+</body>
+</html>
