@@ -97,40 +97,64 @@ h1 {
     letter-spacing: 0.08em;
 }
 
+.more-labs {
+    margin-top: 3rem;
+}
+
+.more-labs .intro {
+    margin-bottom: 1.25rem;
+}
+
 .lab-grid {
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.25rem;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+    align-items: stretch;
 }
 
 .lab-card {
     margin: 0;
+    display: flex;
 }
 
 .lab-card a {
     display: block;
-    padding: 1.5rem;
+    flex: 1;
+    min-width: 0;
+    padding: 1.5rem 1.5rem 1.5rem 1.75rem;
     background: var(--bg-elevated);
     border: 1px solid var(--border);
     border-radius: var(--radius);
+    border-left: 3px solid var(--border);
     text-decoration: none;
     color: var(--text);
-    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s, box-shadow 0.2s;
     box-shadow: var(--shadow);
     text-align: left;
+}
+
+.lab-card.available a {
+    border-left-color: var(--accent);
+}
+
+.lab-card.placeholder a {
+    border-left-color: var(--text-muted);
 }
 
 .lab-card a:hover {
     border-color: var(--accent);
     background: rgba(21, 26, 34, 0.98);
     transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
 }
 
 .lab-card.placeholder a:hover {
     border-color: var(--text-muted);
+    border-left-color: var(--text-muted);
 }
 
 .lab-id {
@@ -138,23 +162,24 @@ h1 {
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--accent);
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
     letter-spacing: 0.05em;
 }
 
 .lab-name {
     display: block;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: #e2e8f0;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
 }
 
 .lab-desc {
     display: block;
     font-size: 0.875rem;
     color: var(--text-muted);
-    margin-bottom: 0.9rem;
+    margin-bottom: 1rem;
     line-height: 1.5;
 }
 
@@ -162,7 +187,7 @@ h1 {
     display: inline-block;
     font-size: 0.7rem;
     font-weight: 600;
-    padding: 0.25rem 0.6rem;
+    padding: 0.35rem 0.75rem;
     background: var(--accent);
     color: var(--bg);
     border-radius: var(--radius-sm);

@@ -22,18 +22,18 @@ This is a **CTF-style vulnerable web app** for security enthusiasts to practice 
 
 | ID | Category | Status | Module / Notes |
 |----|----------|--------|-----------------|
-| **A01:2025** | Broken Access Control | ✅ Lab | [IDOR](Modules/IDOR/) – Insecure Direct Object References |
+| **A01:2025** | Broken Access Control | ✅ Lab | [Broken Access Control (IDOR)](Modules/IDOR/) – Insecure Direct Object References |
 | **A02:2025** | Security Misconfiguration | ✅ Lab | [Security Misconfiguration](Modules/A02_Security_Misconfiguration/) – default accounts, directory listing, verbose errors, security headers. See [LABS.md](Modules/A02_Security_Misconfiguration/LABS.md) for lab plan. |
 | **A03:2025** | Software Supply Chain Failures | 🚧 Coming soon | Placeholder |
 | **A04:2025** | Cryptographic Failures | 🚧 Coming soon | Placeholder |
-| **A05:2025** | Injection | ✅ Labs | [SQL Injection](Modules/SQli/), [XSS](Modules/XSS/) |
+| **A05:2025** | Injection | ✅ Labs | [Injection – SQL](Modules/SQli/), [Injection – XSS](Modules/XSS/) |
 | **A06:2025** | Insecure Design | 🚧 Coming soon | Placeholder |
-| **A07:2025** | Authentication Failures | ✅ Lab | [Insecure Authentication](Modules/Insecure_Authentication/) |
+| **A07:2025** | Authentication Failures | ✅ Lab | [Authentication Failures](Modules/Insecure_Authentication/) |
 | **A08:2025** | Software or Data Integrity Failures | 🚧 Coming soon | Placeholder |
 | **A09:2025** | Security Logging & Alerting Failures | 🚧 Coming soon | Placeholder |
 | **A10:2025** | Mishandling of Exceptional Conditions | 🚧 Coming soon | Placeholder |
 
-**Extra lab (related to A02 / general):** [Sensitive Information Disclosure](Modules/Info_Disclosure/) – hardcoded credentials, client-side secrets.
+**More labs (Other):** [Sensitive Information Disclosure](Modules/Info_Disclosure/) – hardcoded credentials, client-side secrets. Additional labs that support OWASP topics or general web security live in the "More labs" section on the homepage.
 
 ---
 
@@ -51,7 +51,7 @@ This is a **CTF-style vulnerable web app** for security enthusiasts to practice 
     ├── XSS/                 # A05 – Injection (XSS)
     ├── SQli/                # A05 – Injection (SQLi)
     ├── Insecure_Authentication/  # A07 – Authentication Failures
-    ├── Info_Disclosure/     # A02 / Sensitive data exposure
+    ├── Info_Disclosure/     # More labs – Sensitive Information Disclosure
     ├── A02_Security_Misconfiguration/
     ├── A03_Supply_Chain/
     ├── A04_Cryptographic_Failures/

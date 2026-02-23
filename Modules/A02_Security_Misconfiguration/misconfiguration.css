@@ -5,8 +5,10 @@
 }
 
 .misconfiguration-button {
-    display: inline-block;
-    margin: 1rem 0;
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 1rem auto 1.5rem;
     padding: 0.75rem 1.5rem;
     background: var(--mod-accent);
     color: var(--mod-bg);
@@ -14,6 +16,7 @@
     border-radius: var(--mod-radius-sm);
     font-weight: 500;
     transition: background 0.2s;
+    text-align: center;
 }
 
 .misconfiguration-button:hover {

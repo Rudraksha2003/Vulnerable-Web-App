@@ -8,6 +8,19 @@
     display: block;
 }
 
+/* Prevent comment box from resizing horizontally */
+#xss-input,
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    width: 100%;
+}
+
 .flag-hint {
     max-width: 440px;
     margin: 1.5rem auto 0.5rem;
