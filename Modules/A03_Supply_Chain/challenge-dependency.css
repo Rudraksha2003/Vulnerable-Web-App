@@ -1,0 +1,180 @@
+/* A03 practical challenge – Feedback Portal with configurable widget */
+
+.subtitle {
+    font-size: 0.9rem;
+    color: var(--ch-muted);
+    margin: 0;
+    text-align: center;
+}
+
+.practical-desc {
+    max-width: 520px;
+}
+
+.app-container {
+    max-width: 520px;
+    margin: 0 auto 2rem;
+    padding: 0 1.5rem;
+}
+
+.app-card {
+    background: var(--ch-card);
+    border: 1px solid var(--ch-border);
+    border-radius: var(--ch-radius);
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.app-card h2 {
+    font-size: 1.15rem;
+    color: var(--ch-accent);
+    margin: 0 0 0.5rem;
+}
+
+.app-intro {
+    font-size: 0.9rem;
+    color: var(--ch-muted);
+    margin: 0 0 1.25rem;
+    line-height: 1.5;
+}
+
+.config-section {
+    margin-bottom: 1.25rem;
+}
+
+.config-section h3 {
+    font-size: 0.95rem;
+    color: var(--ch-text);
+    margin: 0 0 0.35rem;
+}
+
+.config-hint {
+    font-size: 0.85rem;
+    color: var(--ch-muted);
+    margin: 0 0 0.75rem;
+}
+
+.paths-label {
+    font-size: 0.85rem;
+    color: var(--ch-text);
+    margin: 0 0 0.5rem;
+}
+
+.widget-paths {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.path-btn {
+    padding: 0.4rem 0.75rem;
+    font-family: inherit;
+    font-size: 0.8rem;
+    background: rgba(34, 197, 94, 0.12);
+    color: var(--ch-accent);
+    border: 1px solid var(--ch-border);
+    border-radius: 6px;
+    cursor: pointer;
+    width: auto;
+    transition: background 0.2s;
+}
+
+.path-btn:hover {
+    background: rgba(34, 197, 94, 0.22);
+}
+
+.widget-form {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.widget-form input {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background: var(--ch-bg);
+    border: 1px solid var(--ch-border);
+    border-radius: 6px;
+    color: var(--ch-text);
+    box-sizing: border-box;
+}
+
+.widget-form input:focus {
+    outline: none;
+    border-color: var(--ch-accent);
+}
+
+.widget-form button {
+    flex: 0 0 auto;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+    width: auto;
+}
+
+.load-status {
+    font-size: 0.85rem;
+    color: var(--ch-muted);
+    margin: 0;
+    min-height: 1.4em;
+}
+
+.load-status.error {
+    color: var(--ch-danger);
+}
+
+.widget-area {
+    min-height: 3rem;
+    padding: 1rem;
+    background: var(--ch-bg);
+    border: 1px dashed var(--ch-border);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.widget-placeholder,
+.widget-loaded {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ch-muted);
+}
+
+.exfil-section {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ch-border);
+}
+
+.exfil-section h3 {
+    font-size: 0.95rem;
+    color: var(--ch-accent);
+    margin: 0 0 0.5rem;
+}
+
+.debrief {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--ch-border);
+}
+
+.debrief h4 {
+    font-size: 0.9rem;
+    color: var(--ch-accent);
+    margin: 0 0 0.4rem;
+}
+
+.debrief p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--ch-muted);
+    line-height: 1.55;
+}
+
+.output-box {
+    font-family: var(--ch-font);
+    font-size: 0.9rem;
+}

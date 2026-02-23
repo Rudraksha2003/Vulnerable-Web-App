@@ -1,0 +1,30 @@
+/* A03 Software Supply Chain module – overrides only (theme in _shared/theme.css) */
+
+.module-content section {
+    margin-top: 0.5rem;
+}
+
+.supply_chain-button {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 1rem auto 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--mod-accent);
+    color: var(--mod-bg);
+    text-decoration: none;
+    border-radius: var(--mod-radius-sm);
+    font-weight: 500;
+    transition: background 0.2s;
+    text-align: center;
+}
+
+.supply_chain-button:hover {
+    background: var(--mod-accent-hover);
+}
+
+.lab-hint {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--mod-text-muted);
+}

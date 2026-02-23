@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../_shared/theme.css">
+    <link rel="stylesheet" href="../_shared/challenge.css">
+    <link rel="stylesheet" href="challenge-dependency.css">
+    <title>Feedback Portal | A03 Software Supply Chain</title>
+</head>
+<body>
+    <header>
+        <p class="back-link"><a href="supply_chain.html">← Back to Software Supply Chain</a></p>
+        <h1>Feedback Portal</h1>
+        <p class="subtitle">Demo app – configurable third-party widget</p>
+    </header>
+
+    <!-- Simulated secret the app holds (API key, token, etc.) -->
+    <div id="app-secret" data-flag="FLAG{A03_Unverified_Dependency_Loaded}" hidden aria-hidden="true"></div>
+
+    <div class="challenge-description practical-desc">
+        <p>This is a <strong>Feedback Portal</strong> used by the team. It loads a third-party “feedback widget” so users can submit comments. The widget script URL is configurable (e.g. for staging vs production). Your job: find a widget URL that, when loaded, exfiltrates the secret this page holds.</p>
+    </div>
+
+    <div class="app-container">
+        <div class="app-card">
+            <h2>Feedback</h2>
+            <p class="app-intro">Submit your feedback below. The widget is loaded from the URL configured by the admin.</p>
+
+            <div class="config-section">
+                <h3>Widget configuration</h3>
+                <p class="config-hint">Script URL (relative path). Pick a path below or type your own, then click Load widget.</p>
+                <p class="paths-label">Available paths under <code>libs/</code>:</p>
+                <ul class="widget-paths" aria-label="Available widget script paths">
+                    <li><button type="button" class="path-btn" data-path="libs/feedback-widget.js">libs/feedback-widget.js</button></li>
+                    <li><button type="button" class="path-btn" data-path="libs/legit.js">libs/legit.js</button></li>
+                    <li><button type="button" class="path-btn" data-path="libs/utils.js">libs/utils.js</button></li>
+                    <li><button type="button" class="path-btn" data-path="libs/analytics.js">libs/analytics.js</button></li>
+                    <li><button type="button" class="path-btn" data-path="libs/evil.js">libs/evil.js</button></li>
+                </ul>
+                <div class="widget-form">
+                    <input type="text" id="widget-url" placeholder="libs/feedback-widget.js" value="" autocomplete="off">
+                    <button type="button" id="load-widget-btn">Load widget</button>
+                </div>
+                <p id="load-status" class="load-status"></p>
+            </div>
+
+            <div id="widget-area" class="widget-area">
+                <p class="widget-placeholder">No widget loaded yet.</p>
+            </div>
+
+            <div id="flag-output" class="output-section exfil-section" style="display: none;">
+                <h3>Data received by widget (exfiltrated)</h3>
+                <div id="output" class="output-box"></div>
+                <div class="debrief">
+                    <h4>What happened?</h4>
+                    <p>The app loaded a script from a URL you controlled. That script ran with full access to this page and stole the secret—exactly like a compromised or malicious third-party dependency (e.g. a tampered analytics or feedback library). <strong>In practice:</strong> allowlist widget URLs, use Subresource Integrity (SRI), or load only from trusted origins you control.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="challenge-dependency.js"></script>
+</body>
+</html>
